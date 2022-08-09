@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
-import { Paginacion_planets } from './../datos_stars';
+import { Card, Grid, Button } from 'semantic-ui-react';
+
 export const  Planetas =({data})=> {
 
   return (
@@ -9,7 +9,7 @@ export const  Planetas =({data})=> {
     <h1 className='text-white' >Planetas</h1>
     </div>
     <div className='mt-2 my-2'>
-                <Paginacion_planets />
+               
         </div>
       <Grid columns={4} >
         {data.map((planets,i)=>{
@@ -29,6 +29,7 @@ export const  Planetas =({data})=> {
                                                         <strong>Poblacion: </strong>
                                                         <p>{planets.population}</p>
                                                 </Card.Description>
+                                                <Button> Detalle </Button>
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>

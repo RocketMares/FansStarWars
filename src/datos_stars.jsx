@@ -16,12 +16,14 @@ import { Planetas } from './componentes/planetas';
 export const Muesta_datos = ()=>{
     //se preparan las instacias
     // setCounter(num)
+    
+
     const [people, setPeople] = useState([]);
     const [films, setFilms] = useState([]);
     const [planets, setPlanets] = useState([]);
     //se usa este para que muestre un load mientras hace las peticiones a la api
     const [loading, setLoading] = useState(true);
-
+    // setCounter(counter)
     //SE usa useEffect para que se renderizen las peticiones
     useEffect(()=>{
         //se usan funciones asincronas para que devuelvan los objetos por medio de funcion y se guarden en su variable
@@ -77,78 +79,4 @@ export const Muesta_datos = ()=>{
     );
 }
 
-export const Paginacion_pj = ( {value} ) => {
-    const [ counter,setCounter ] = useState(1);
 
-    const  handleadd = () =>{
-        // setCounter( (c) => c+1);
-        setCounter(counter+1);
-
-        }
-    const descleadd = () =>{
-        setCounter(counter-1);
-    }
-    const Resetleadd = () =>{
-        setCounter(value);
-    }
-    const Maxleadd = () =>{
-        setCounter(value=8);
-    }
-
-    return (
-        <> 
-            <Pagination className="justify-content-center">
-            <Pagination.First onClick={Resetleadd} />
-            <Pagination.Prev onClick={descleadd} />  
-            <Pagination.Item>{counter}</Pagination.Item>
-            <Pagination.Next onClick={handleadd} /> 
-            <Pagination.Last onClick={Maxleadd} />
-            </Pagination>
-        </>
-      
-        );
-} 
-export const Paginacion_planets = ( {value1} ) => {
-    const [ counter,setCounter ] = useState(1);
-
-    const  handleadd = () =>{
-        // setCounter( (c) => c+1);
-        setCounter(counter+1);
-
-        }
-    const descleadd = () =>{
-        setCounter(counter-1);
-    }
-    const Resetleadd = () =>{
-        setCounter(value1);
-    }
-    const Maxleadd = () =>{
-        setCounter(value1=6);
-    }
-
-    return (
-        <> 
-            <Pagination className="justify-content-center">
-            <Pagination.First onClick={Resetleadd} />
-            <Pagination.Prev onClick={descleadd} />  
-            <Pagination.Item>{counter}</Pagination.Item>
-            <Pagination.Next onClick={handleadd} /> 
-            <Pagination.Last onClick={Maxleadd} />
-            </Pagination>
-        </>
-      
-        );
-} 
-
-Paginacion_pj.propTypes = {
-    value: PorpTypes.number.isRequired,
-}
-Paginacion_pj.defaultProps = {
-    value: 1,
-}
-Paginacion_planets.propTypes = {
-    value1: PorpTypes.number.isRequired,
-}
-Paginacion_planets.defaultProps = {
-    value1: 1,
-}

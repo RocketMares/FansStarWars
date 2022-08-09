@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
-import { Paginacion_pj } from './../datos_stars';
+import { Button } from 'semantic-ui-react'
+
 
 
 
@@ -12,7 +13,7 @@ export const  Personajes =({data})=> {
     <h1 className='text-white' > Personajes</h1>
     </div>
         <div className='mt-2 my-2'>
-                <Paginacion_pj />
+              
         </div>
 
       <Grid columns={4} >
@@ -35,6 +36,7 @@ export const  Personajes =({data})=> {
                                                         <strong>Color de ojos: </strong>
                                                         <p>{people.eye_color}</p>
                                                 </Card.Description>
+                                                <Button> Detalle </Button>
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>

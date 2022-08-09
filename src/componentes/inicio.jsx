@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Grid,Button } from 'semantic-ui-react';
 
 
 export  const Inicio =({data})=> {
@@ -26,6 +26,7 @@ export  const Inicio =({data})=> {
                                                         <p>{films.release_date}</p>
                                                     
                                                 </Card.Description>
+                                                <Button> Detalles </Button>
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>

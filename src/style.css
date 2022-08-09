@@ -1,5 +1,5 @@
 .fondo{
-    background: url('./assets/fondo2_adobe_express.svg');
+    background: url('./assets/fondo_adobe_express.svg');
     height: 100vh; /*detecta el dispositivo */
     background-position: center; /*Centrado*/
     background-size: cover; /* tamaño adecuado conforme se detectye con el vh*/
