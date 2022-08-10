@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
-import { Button } from 'semantic-ui-react'
-
+import { Button } from 'semantic-ui-react';
 
 
 
 export const  Personajes =({data})=> {
-
+let liga_indi = "";
   return (
     <>
     <div className='mt-4 my-4'>
@@ -17,14 +16,17 @@ export const  Personajes =({data})=> {
         </div>
 
       <Grid columns={4} >
-        {data.map((people,i)=>{
+        
+        {
+        data.map((people,i)=>{
                 return (
                         <>
+                      
                         <Grid.Column key={i} >
-                                <Card>
+                                <Card >
                                         <Card.Content>
                                                 <Card.Header>
-                                                        {people.name}
+                                                {people.name}
                                                 </Card.Header>
                                                 <Card.Description>
                                                         <strong>Altura: </strong>
@@ -36,14 +38,20 @@ export const  Personajes =({data})=> {
                                                         <strong>Color de ojos: </strong>
                                                         <p>{people.eye_color}</p>
                                                 </Card.Description>
-                                                <Button> Detalle </Button>
+                                             
+                                                
+                                                
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>
+                        
                         </>
                 )
+                {liga_indi = people.url;}
         })}
       </Grid>
+     
     </>
   );
 }
+

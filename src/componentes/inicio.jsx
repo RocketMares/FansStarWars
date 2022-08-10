@@ -26,7 +26,7 @@ export  const Inicio =({data})=> {
                                                         <p>{films.release_date}</p>
                                                     
                                                 </Card.Description>
-                                                <Button> Detalles </Button>
+                                            
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>

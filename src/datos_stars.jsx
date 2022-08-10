@@ -43,7 +43,7 @@ export const Muesta_datos = ()=>{
             setLoading(false);
         }
         async function fetchPeliculas(){
-            let res = await fetch('https://swapi.dev/api/films/?format=json');
+            let res = await fetch(`https://swapi.dev/api/films/?format=json`);
             let data = await res.json();
             setFilms(data.results)
             setLoading(false);

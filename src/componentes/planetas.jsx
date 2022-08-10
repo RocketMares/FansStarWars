@@ -29,7 +29,7 @@ export const  Planetas =({data})=> {
                                                         <strong>Poblacion: </strong>
                                                         <p>{planets.population}</p>
                                                 </Card.Description>
-                                                <Button> Detalle </Button>
+                                             
                                         </Card.Content>
                                 </Card>
                         </Grid.Column>

@@ -5,9 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Login_button,Login_out,Perfil} from '../login';
 import { Button } from 'semantic-ui-react';
 import {useAuth0} from '@auth0/auth0-react';
+import { Muesta_datos } from '../datos_stars';
+import  PorpTypes  from "prop-types";
+import { useState } from 'react';
 
 export const Navegador =()=> {
     const {isAuthenticated} = useAuth0();
+
+    
+
+
 return (
         <>
         <Segment inverted>
@@ -36,9 +43,6 @@ return (
                 
                 </Container>
                 <Menu.Item position='left'>
-                <Menu.Item>
-                    <Input icon='search' placeholder='Search...' />
-                </Menu.Item >
             
                 {isAuthenticated ? <>
                     <Perfil/>
@@ -55,3 +59,7 @@ return (
 
 )
 }
+
+
+
+
